@@ -18,14 +18,34 @@ It demonstrates the use of a multi-stage build (available in Docker CE 17.06+) t
 
 ## Deploying the Function
 
-### Using the CLI (`faas-cli`)
-Install the client as described at the [faas-cli repo](https://github.com/alexellis/faas-cli/), then deploy the function as follows:
+Make sure you have deployed a FaaS stack to your cluster using the instructions on the [FaaS repo](https://github.com/alexellis/faas).
+
+### Use the CLI (`faas-cli`)
+
+**Get the CLI**
+
+The [faas-cli](https://github.com/alexellis/faas-cli/) can be installed via `brew install faas-cli` or `curl -sSL https://get.openfaas.com | sudo sh`.
+
+Now deploy the function as follows:
 
 ```
 # faas-cli -action deploy -image=johnmccabe/faas-img2ansi -name=img2ansi -fprocess="/usr/bin/faas-img2ansi"
 200 OK
 URL: http://localhost:8080/function/img2ansi
 ```
+
+### Testing the Function
+Now that the function is running in your FaaS environment you can test it from the command line by running:
+
+```
+$ curl -SL https://raw.githubusercontent.com/johnmccabe/faas-img2ansi/master/images/gopher.png > gopher.png
+
+$ curl localhost:8080/function/img2ansi --data-binary @gopher.png
+```
+
+**NOTE**: as mentioned earlier, you should stick to small images for the moment (32x32 or so) as the function does not currently scale down large images.
+
+## Other ways to deploy the function
 
 ### Using Curl
 The function can be deployed using curl to hit the API endpoint directly:
@@ -43,11 +63,3 @@ The function can be deployed using curl to hit the API endpoint directly:
 You can also create the function via the UI at http://localhost:8080/ui/, clicking the `Create New Function` link and entering the following data:
 
 ![](images/create_new_function.png)
-
-## Testing the Function
-Now that the function is running in your FaaS environment you can test it from the command line by running:
-```
-curl localhost:8080/function/img2ansi --data-binary @images/gopher.png
-```
-
-**NOTE**: as mentioned earlier, you should stick to small images for the moment (32x32 or so) as the function does not currently scale down large images.
