@@ -4,7 +4,7 @@
 
 This repo contains an example [FaaS](https://github.com/alexellis/faas) function which uses the [johnmccabe/img2ansi](https://github.com/johnmccabe/img2ansi) Go library to convert an image to an ANSI string.
 
-Current the following image formats are supported:
+Currently the following image formats are supported:
 
 - `png`
 - `gif`
@@ -47,7 +47,7 @@ You can also create the function via the UI at http://localhost:8080/ui/, clicki
 ## Testing the Function
 Now that the function is running in your FaaS environment you can test it from the command line by running:
 ```
-curl localhost:8080/function/kevin2 --data-binary @images/gopher.png
+curl localhost:8080/function/img2ansi --data-binary @images/gopher.png
 ```
 
 **NOTE**: as mentioned earlier, you should stick to small images for the moment (32x32 or so) as the function does not currently scale down large images.
