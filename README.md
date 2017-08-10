@@ -40,7 +40,7 @@ The function can be deployed using curl to hit the API endpoint directly:
 ```
 
 ### Using the UI
-You can also create the function via the UI at http://localhost:8080/ui, clicking the `Create New Function` link and entering the following data:
+You can also create the function via the UI at http://localhost:8080/ui/, clicking the `Create New Function` link and entering the following data:
 
 ![](images/create_new_function.png)
 
