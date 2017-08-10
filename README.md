@@ -2,9 +2,15 @@
 
 This repo contains an example [FaaS]() function which uses the [johnmccabe/img2ansi](github.com/johnmccabe/img2ansi) Go library to convert an image to an ANSI string.
 
+Current the following image formats are supported:
+
+- `png`
+- `gif`
+- `jpeg`
+
 It demonstrates the use of a multi-stage build (available in Docker CE 17.06+) to build the Go binary seperately to the FaaS function image so as to keep the size as small as possible.
 
-**NOTE**: Its recommended at this point to stick to small images (`png`, `gif` or `jpeg`) as the resize capability hasn't been added yet.
+**NOTE**: Its recommended at this point to stick to small images as the resize capability hasn't been added yet.
 
 ![](images/logo.png)
 
