@@ -1,6 +1,8 @@
 # faas-img2ansi
 
-This repo contains an example [FaaS]() function which uses the [johnmccabe/img2ansi](github.com/johnmccabe/img2ansi) Go library to convert an image to an ANSI string.
+[![Go Report Card](https://goreportcard.com/badge/github.com/johnmccabe/faas-img2ansi)](https://goreportcard.com/report/github.com/johnmccabe/faas-img2ansi)
+
+This repo contains an example [FaaS](https://github.com/alexellis/faas) function which uses the [johnmccabe/img2ansi](https://github.com/johnmccabe/img2ansi) Go library to convert an image to an ANSI string.
 
 Current the following image formats are supported:
 
