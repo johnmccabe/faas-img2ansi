@@ -1,6 +1,6 @@
 # faas-img2ansi
 
-[![Go Report Card](https://goreportcard.com/badge/github.com/johnmccabe/faas-img2ansi)](https://goreportcard.com/report/github.com/johnmccabe/faas-img2ansi)
+[![Go Report Card](https://goreportcard.com/badge/github.com/johnmccabe/faas-img2ansi)](https://goreportcard.com/report/github.com/johnmccabe/faas-img2ansi) [![](https://images.microbadger.com/badges/image/johnmccabe/faas-img2ansi.svg)](https://microbadger.com/images/johnmccabe/faas-img2ansi "Get your own image badge on microbadger.com")
 
 This repo contains an example [FaaS](https://github.com/alexellis/faas) function which uses the [johnmccabe/img2ansi](https://github.com/johnmccabe/img2ansi) Go library to convert an image to an ANSI string.
 
